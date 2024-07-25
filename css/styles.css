@@ -1,0 +1,239 @@
+@charset "UTF-8";
+.warapper {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(0, 0, 0) 100%);
+}
+
+.header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nav {
+  margin: 0 auto;
+  width: 65%;
+  background-color: #ffffff;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.menu_logo {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  background: url("../img/menu.svg") center no-repeat;
+  width: 72px;
+  height: 72px;
+  border-radius: 0 0 0 15px;
+}
+
+.logo {
+  background: url("../img/logo.svg") center right no-repeat;
+  width: 168px;
+  height: 24px;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-around;
+  width: 705px;
+}
+
+.nav__menu-item {
+  width: 14.5%;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.sliding__box {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(0deg, rgb(35, 35, 35) 0%, rgba(255, 255, 255, 0) 100%);
+  overflow: hidden;
+  display: flex;
+}
+
+.sliding__1 {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll1 20s linear infinite;
+  animation-delay: -10s;
+}
+
+.sliding__2 {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.sliding__1:hover {
+  animation-play-state: paused;
+}
+
+.sliding__2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll1 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.sliding__item {
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 36%;
+}
+
+.sliding__item::before {
+  content: "•";
+  margin: 0 40px;
+  color: gray;
+}
+
+.content {
+  width: 65%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.course {
+  width: 54%;
+  position: relative;
+}
+
+.absolute_block__1 {
+  width: 140px;
+  display: flex;
+  background-color: #F4C128;
+  justify-content: space-around;
+  transform: rotate(-15deg);
+  box-shadow: 0 20px 72px 0px rgba(244, 193, 40, 0.4);
+  border-radius: 8px;
+  position: absolute;
+  left: 70px;
+  top: 80px;
+  align-items: center;
+}
+
+.absolute_img__1 {
+  background: url("../img/calendar.svg") center no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.absolute_text {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.absolute_block__2 {
+  width: 156px;
+  display: flex;
+  background-color: #F4C128;
+  justify-content: space-around;
+  transform: rotate(15deg);
+  border-radius: 8px;
+  position: absolute;
+  left: 260px;
+  top: 100px;
+  align-items: center;
+}
+
+.absolute_img__2 {
+  background: url("../img/pawg.svg") center no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.absolute_block__3 {
+  width: 100px;
+  display: flex;
+  background-color: #F4C128;
+  justify-content: space-around;
+  transform: rotate(-15deg);
+  border-radius: 8px;
+  position: absolute;
+  left: 384px;
+  top: 218px;
+  align-items: center;
+}
+
+.absolute_img__3 {
+  background: url("../img/clock.svg") center no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.course__article {
+  font-size: 64px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 200px;
+  width: 355px;
+}
+
+.course__article span {
+  color: #F4C128;
+}
+
+.course__text {
+  width: 320px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.course__text-gray {
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.content__img {
+  background: url("../img/woman.png") center no-repeat;
+  width: 381px;
+  height: 570px;
+}
+
+.banner {
+  width: 49%;
+  background-color: #F4C128;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 32px 32px 0 32px;
+}
+
+.banner__text {
+  font-size: 10px;
+}
+
+.banner__article {
+  font-size: 32px;
+}
+
+.banner__button {
+  width: 181px;
+  height: 48px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 0 0 -24px 32px;
+}/*# sourceMappingURL=styles.css.map */
