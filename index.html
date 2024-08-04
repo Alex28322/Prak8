@@ -25,6 +25,7 @@
         <a class="nav__menu-item">відгуки</a>
     </div>
 </nav>
+<div class="slider">
 <div class="sliding__box">
 <div class="sliding__1">
     <p class="sliding__item">Якщо ти майстер, і працюєш інтуїтивно - тобі до мене</p>
@@ -36,6 +37,7 @@
     <p class="sliding__item">Якщо ти майстер, і працюєш інтуїтивно - тобі до мене</p>
     <p class="sliding__item">Якщо ти майстер, і працюєш інтуїтивно - тобі до мене</p>
     <p class="sliding__item">Якщо ти майстер, і працюєш інтуїтивно - тобі до мене</p>
+</div>
 </div>
 </div>
 <div class="content">
@@ -52,7 +54,7 @@
             <div class="absolute_img__3"></div>
             <div class="absolute_text">2 місяці</div>
         </div>
-        <h1 class="course__article"><span>Масштабний</span> Онлайн-Курс З колористики</h1>
+        <h1 class="course__article"><span>Масштабний</span> Онлайн-Курс <br> З колористики</h1>
         <p class="course__text">Почни робити фарбування вже вдома на тест- пасмах що входять в вартість пакету мого курсу.</p>
         <p class="course__text-gray">**Кількість місць обмежена</p>
     </div>
@@ -65,12 +67,145 @@
         <button class="banner__button">до вартості курсу</button>
     </div>
     <div class="timer">
-        <div class="timer__hours"></div>
-        <div class="timer__hours"></div>
-        <div class="timer__hours"></div>
+        <div class="timer__item">
+            <div class="time hours"></div>
+            <div class="timer__text">Hours</div>
+        </div>
+        <div class="timer__item">
+            <div class="time minutes"></div>
+            <div class="timer__text">Minutes</div>
+        </div>
+        <div class="timer__item">
+            <div class="time seconds"></div>
+            <div class="timer__text">Seconds</div>
+        </div>
     </div>
 </div>
+<div class="blank">
+    <div class="blank__left">
+        <h2 class="blank__left-article">Оплата за навчання</h2>
+        <p class="blank__left-text">Будь-ласка заповніть поля нижче для того щоб ми змогли ідентифікувати Ваш платіж</p>
+        <form class="form" action="#">
+            <div class="username__box">
+            <label class="username__lable lable" for="username">Ім’я</label>
+            <input type="text" name="username" placeholder="Введіть Ваше ім’я" class="username" >
+            <div class="username__error error">Необхідно ввести Ваше ім’я</div>
+        </div>
+        <div class="usersurname__box">
+            <label class="usersurname__lable lable" for="usersurname">Прізвище</label>
+            <input type="text" name="usersurname" placeholder="Введіть Ваше Прізвище"  class="usersurname" >
+            <div class="usersurname__error error">Необхідно ввести Ваше прізвище</div>
+        </div>
+        <div class="phone__box">
+            <label class="phone__lable" for="phone">Номер телефону</label>
+            <input type="tel" name="phone" class="phone">
+            <div class="phone__error error">Необхідно ввести ваш телефон</div>
+        </div>
+        <div class="email__box"> 
+            <label class="email__lable" for="email">Email</label>
+            <input type="email" name="email" placeholder="mail@sample.com" class="email" >
+            <div class="email__error error">Необхідно ввести вашу електронну пошту</div>
+        </div>
+        <button class="submit"></button>
+        </form>
+    </div>
+    <div class="blank__right">
+        <button class="cross">✕
+        </button>
+        <h5 class="blank__right-article">Виберіть тип оплати:</h5>
+        <p class="blank__right-text"> Виберіть тип оплати який є зручнішим для вас, і ми надамо вам посилання на оплату</p>
+        <div class="blank__buttons">
+            <button class="blank__button yellow">Один Платіж</button>
+            <button class="blank__button">Частинами</button>
+        </div>
+        <h5 class="payment">Сума до сплати:</h5>
+        <h3 class="payment__price-1">32 000</h3>
+        <h1 class="payment__price-2">24 500 <span>грн</span></h1>
+        <button class="blank__button-long yellow">Сплатити</button>
+    </div>
+</div>
+<div class="blank__background"></div>
         </header>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+document.querySelector('.banner__button').addEventListener('click', function() {
+  document.querySelector('.blank').style.display = 'flex';
+  document.querySelector('.blank__background').style.display = 'block';
+  document.querySelector('.off__button').style.display = 'inline-block';
+});
+document.querySelector('.cross').addEventListener('click', function() {
+  document.querySelector('.blank').style.display = 'none';
+  document.querySelector('.blank__background').style.display = 'none';
+});
+});
+</script>
+<script>
+    var end = new Date('01/1/2025 10:1 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+            clearInterval(timer);
+            document.querySelector('.timer').innerHTML = 'EXPIRED!';
+            return;
+        }
+
+        var hours = Math.floor(distance / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.querySelector('.hours').innerHTML = hours;
+        document.querySelector('.minutes').innerHTML = minutes;
+        document.querySelector('.seconds').innerHTML = seconds;
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
+<script>
+    document.querySelector('.form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var errors = document.querySelectorAll('.error');
+        errors.forEach(function(error) {
+            error.style.display = 'none';
+        });
+
+        var name = document.querySelector('.username').value;
+        if (!name) {
+            document.querySelector('username__error').style.display = 'block';
+        }
+
+      
+        var surname = document.querySelector('.usersurname').value;
+        if (!surname) {
+            document.querySelector('.usersurname__error').style.display = 'block';
+        }
+
+       
+        var phone = document.querySelector('.phone').value;
+        if (!phone) {
+            document.querySelector('.phone__error').style.display = 'block';
+        }
+
+    
+        var email = document.querySelector('.email').value;
+        if (!email) {
+            document.querySelector('.email__error').style.display = 'block';
+        }
+
+
+        if (name && surname && phone && email) {
+           
+            event.target.submit();
+        }
+    });
+</script>
 </body>
 </html>
