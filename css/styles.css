@@ -51,6 +51,7 @@
   background: url("../img/logo.svg") center right no-repeat;
   width: 168px;
   height: 24px;
+  background-size: contain;
 }
 
 .nav__menu {
@@ -230,10 +231,10 @@
   background-color: #F4C128;
   margin: 0 auto;
   border-radius: 16px;
-  padding: 24px 32px 0px;
+  padding: 24px 32px;
   font-family: "PF Din Text Comp Pro", serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 55px;
 }
 
@@ -245,7 +246,7 @@
 .banner__article {
   font-size: 32px;
   text-transform: uppercase;
-  margin: 10px 0 20px;
+  margin: 10px 0 40px;
 }
 
 .banner__button {
@@ -261,13 +262,14 @@
   width: 45%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .timer__item {
   width: 30%;
   border-radius: 8px;
   background-color: rgba(51, 51, 51, 0.05);
-  padding: 24px 32px;
+  padding: 10% 9.5%;
 }
 
 .time {
@@ -549,14 +551,43 @@
     margin: 0 auto;
     margin-top: -350px;
   }
+  .absolute_block__1 {
+    top: 120px;
+    left: 65%;
+    transform: rotate(30deg);
+    width: 70px;
+    height: 26px;
+  }
+  .absolute_block__2 {
+    top: 170px;
+    left: 50%;
+    transform: rotate(15deg);
+    width: 126px;
+    height: 26px;
+  }
+  .absolute_block__3 {
+    top: 250px;
+    left: 80%;
+    transform: rotate(-15deg);
+    width: 70px;
+    height: 26px;
+  }
+  .course__article {
+    font-size: 42px;
+    width: 233px;
+  }
   .banner {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .timer {
-    width: 13%;
+    width: 70%;
+  }
+  .banner__article {
+    margin: 10px 0 20px;
   }
   .banner__button {
-    top: 1240px;
+    top: 1130px;
   }
 }
 @media (max-width: 600px) {
@@ -566,5 +597,26 @@
   }
   .course {
     margin: -350px 0 0 0;
+  }
+  .absolute_block__1 {
+    top: 120px;
+    left: 120%;
+    transform: rotate(30deg);
+    width: 70px;
+    height: 26px;
+  }
+  .absolute_block__2 {
+    top: 170px;
+    left: 90%;
+    transform: rotate(15deg);
+    width: 126px;
+    height: 26px;
+  }
+  .absolute_block__3 {
+    top: 250px;
+    left: 130%;
+    transform: rotate(-15deg);
+    width: 70px;
+    height: 26px;
   }
 }/*# sourceMappingURL=styles.css.map */
