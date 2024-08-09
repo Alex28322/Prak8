@@ -538,6 +538,22 @@ background-color: transparent;
     .banner__button{
         top: 1130px;
     }
+    .blank{
+        flex-wrap: wrap;
+    }
+    .blank__left{
+        width: 90%;
+    }
+    .blank__right{
+        width: 90%;
+    }
+    .phone__box{
+        width: 100%;
+    }
+    .email__box{
+        width: 100%;
+
+    }
 }
 @media(max-width:600px){
     .logo{
