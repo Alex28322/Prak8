@@ -345,7 +345,7 @@
   position: absolute;
   width: 100%;
   color: #E52F2F;
-  display: block;
+  display: none;
 }
 
 .usersurname__box {
@@ -368,7 +368,7 @@
   position: absolute;
   width: 100%;
   color: #E52F2F;
-  display: block;
+  display: none;
 }
 
 .phone__box {
@@ -391,7 +391,7 @@
   position: absolute;
   width: 100%;
   color: #E52F2F;
-  display: block;
+  display: none;
 }
 
 .email__box {
@@ -414,7 +414,7 @@
   position: absolute;
   width: 100%;
   color: #E52F2F;
-  display: block;
+  display: none;
 }
 
 .blank__right {
