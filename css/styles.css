@@ -68,8 +68,7 @@
   background: linear-gradient(0deg, rgb(35, 35, 35) 0%, rgba(255, 255, 255, 0) 100%);
   overflow: hidden;
   font-weight: 400;
-  width: 100%;
-  max-width: 1440px;
+  width: 1440px;
   font-family: "PF Din Text Comp Pro", serif;
 }
 
@@ -520,13 +519,7 @@
   background-color: transparent;
 }
 
-@media (max-width: 1200px) {
-  .content {
-    width: 90%;
-    flex-wrap: wrap;
-  }
-}
-@media (max-width: 950px) {
+@media (max-width: 1400px) {
   .nav__menu {
     display: none;
   }
@@ -543,6 +536,14 @@
     display: inline-block;
     margin-left: 30%;
   }
+}
+@media (max-width: 1200px) {
+  .content {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 950px) {
   .content__img {
     order: -1;
     margin: 0 auto;
